@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <link type="text/css" rel="stylesheet" href="magiczoomplus.css"/>
-  <script type="text/javascript" src="magiczoomplus.js"></script>
-  <script
+  
+  <!-- <script
   src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
   integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> -->
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="magiczoomplus.js"></script>
   <script type="text/javascript" src="masonry.min.js"></script>
 
 
@@ -160,14 +162,15 @@
   </section>
   
   <script>
-      $('.grid').masonry({
-        // set itemSelector so .grid-item is not used in layout
-        itemSelector: '.grid-item',
-        // use element for option
-        columnWidth: '.grid-item',
-        percentPosition: true
-        });
-        var mzOptions = {};
+      $(window).on("load", function() {
+          $('.grid').masonry({
+            // set itemSelector so .grid-item is not used in layout
+            itemSelector: '.grid-item',
+            // use element for option
+            columnWidth: '.grid-item',
+            percentPosition: true
+            });
+      })
    
   </script>
 </body>
